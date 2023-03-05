@@ -1,0 +1,51 @@
+[
+
+    {
+        "title": "Cow Meat",
+        "image": "/images/zabby.png",
+        "id": "cow_meat",
+        "description": "Get your delicious beef to go with soup and jollof!",
+        "price": "30.00"
+      },
+
+      {
+        "title": "Goat Meat",
+        "image": "/images/zabby.png",
+        "id": "goat_meat",
+        "description": "Get your delicious aponkye nam with light soup!",
+        "price": "25.00"
+      },
+
+      {
+        "title": "Cow & Goat Skin",
+        "image": "/images/zabby.png",
+        "id": "cow_goat_skin",
+        "description": "Get your special thick and thin kahuro skin!",
+        "price": "25.00"
+      },
+
+      {
+        "title": "Cow Stomach (Tripe, Liver)",
+        "image": "/images/zabby.png",
+        "id": "cow_stomach",
+        "description": "Get your juicy y3muade3 with pepper soup!",
+        "price": "28.00"
+      },
+
+      {
+        "title": "Goat Stomach (Tripe, Liver)",
+        "image": "/images/zabby.png",
+        "id": "goat_stomach",
+        "description": "Get your juicy y3muade3 with pepper soup!",
+        "price": "28.00"
+      },
+
+      {
+        "title": "Kingsbite Chocolate, GH",
+        "image": "/images/zabby.png",
+        "id": "chocolate_bar",
+        "description": "Get a bar of Ghanaian chocolate as dessert!",
+        "price": "5.00"
+      }
+
+]

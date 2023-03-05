@@ -1,6 +1,11 @@
+import Head from 'next/head'
+import products from 'products.json'
 import Image from 'next/image'
 import { Inter } from 'next/font/google'
 import styles from './page.module.css'
+
+
+
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -8,8 +13,9 @@ export default function Home() {
   return (
     <main className={styles.main}>
       <div className={styles.description}>
+      
         <p>
-          Get started by editing&nbsp;
+          Zabby Meat LLC&nbsp;
           <code className={styles.code}>src/app/page.tsx</code>
         </p>
         <div>
@@ -30,7 +36,7 @@ export default function Home() {
           </a>
         </div>
       </div>
-
+      
       <div className={styles.center}>
         <Image
           className={styles.logo}
@@ -46,46 +52,34 @@ export default function Home() {
       </div>
 
       <div className={styles.grid}>
-        <a
-          href="https://beta.nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={inter.className}>
-            Docs <span>-&gt;</span>
-          </h2>
-          <p className={inter.className}>
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
+        {products.map(product => {
+          return (
+            <div key={product.id} className={styles.card}>
+              <a>
+                
 
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={inter.className}>
-            Templates <span>-&gt;</span>
-          </h2>
-          <p className={inter.className}>Explore the Next.js 13 playground.</p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={inter.className}>
-            Deploy <span>-&gt;</span>
-          </h2>
-          <p className={inter.className}>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
+              <img src={product.image} alt={`Preview of ${product.title}`} />
+              <h3>{ product.title }</h3>
+              <p>{ product.description }</p>
+              <p>${ product.price }</p>
+              </a>
+              
+              <p>
+                <button className="snipcart-add-item"
+                  data-item-id={product.id}
+                  data-item-image={product.image}
+                  data-item-name={product.title}
+                  data-item-price={product.price}>
+                  Add to Cart
+                </button>
+              </p>
+            </div>
+          );
+        })}
       </div>
+    
     </main>
   )
 }
+
+
